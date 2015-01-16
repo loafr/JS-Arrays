@@ -4,7 +4,9 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
 
-  //Code Here
+var first = function(arr) {
+   return arr[0];
+}
 
 
 //Next problem
@@ -15,16 +17,23 @@ var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item the given array.
 
 
-  //Code Here
+var last = function(arr) {
+  return arr.pop();
+}
 
 
 //Next Problem
 
 
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
-//Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
+//Create a function named 'looper' that is given family as it's only argument, loops through the given array, 
+//and alerts every item in the array.
 
-  //Code Here
+var looper = function(family) {
+  for (var i = 0; i < family.length; i++) {
+    alert(family[i]);
+  };
+}
 
 
 //Next problem
@@ -32,7 +41,8 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 
 var letters = ['A', 'B', 'C', 'D', 'E'];
-//Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
+//Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting 
+//every item in the array starting at the end.
 
   //Code Here
 
@@ -53,7 +63,8 @@ var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var evens = [];
 var odds = []
 //Write a function called divider that is given three arguments, nums, evens, and odds.
-//Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
+//Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second 
+//item in the Array being the odds array(all the odd values from nums).
 
 
 
@@ -67,7 +78,9 @@ var getRandomArbitrary = function() {
   return Math.floor(Math.random() * (30 - 0) + 0);
 }
 var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-//Above your given a function that will return a random number between 0 and 30, and an array full or numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
+//Above your given a function that will return a random number between 0 and 30, and an array full or numbers. 
+//Your job is to write a function named finder that will get a random 
+//number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
 
