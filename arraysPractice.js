@@ -105,13 +105,14 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Your job is to write a function named finder that will get a random number, 
 //then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
-var finder = function(getRandomArbitrary) {
-  for (var i = numbers.indexof.length - 1; i >= 0; i--) {
-    if (numbers.indexof[i] === getRandomArbitrary) {
+var finder = function(numbers) {
+  for (var i = numbers.length - 1; i >= 0; i--) {
+    if (numbers.indexof[i] === getRandomArbitrary()) {
       return true;
     }
-  };
+  }
 }
+finder(numbers);
 
 
 //Next problem
@@ -146,21 +147,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 var removeItem = function (myGroceryList, itemToRemove) {
-  var theIndex = itemToRemove.indexof(myGroceryList);
-  if (theIndex >= 0) {
-    myGroceryList.splice(theIndex - 1, 1);
-  };
+  for (var i = myGroceryList.length - 1; i >= 0; i--) {
+    if (myGroceryList[i] === itemToRemove) {
+      myGroceryList.splice(i, 1);
+    }
+  } 
   return myGroceryList;
 }
 
 var addItem = function (myGroceryList, itemToAdd) {
-  return myGroceryList.push(itemToAdd);
+  myGroceryList.push(itemToAdd);
+  return myGroceryList;
 }
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
-
+removeItem(myGroceryList, 'chips');
+addItem(myGroceryList, 'Jerky');
 
 //Next Problem
 
