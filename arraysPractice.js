@@ -77,55 +77,21 @@ var odds = []
 //item in the Array being the odds array(all the odd values from nums).
 
 
-/*
 var divider = function(nums, evens, odds) {
-  var newArray = [];
-  for (var i = nums.length - 1; i >= 0; i--) {
+   var newArray = [];
+   for (var i = nums.length - 1; i >= 0; i--) {
     if (nums[i] % 2 === 1) {
-      evens[i];
+      evens.push(nums[i]);
     }
     else {
-      odds[i];
-    }
-  };
-  return newArray[evens, odds];
-} */     // <-- NOT LIKING THIS VERSION :(
-
-var divider = function(nums, evens, odds) {
-  //var newArray = [];
-  for (var i = nums.length - 1; i >= 0; i--) {
-    if (nums[i] % 2 === 1) {
-      evens[i];
-    }
-    else {
-      odds[i];
+      odds.push(nums[i]);
     }
   }
-  alert(evens);
-  alert(odds);
-  //var newArray = [evens[], odds[], "worked"]
-  //return newArray;           // <-- OR THIS ONE!!!
+  newArray.push(evens);
+  newArray.push(odds);
+   return newArray;
+  }          
 
-
-var divider = function(nums, evens, odds) {
-  evens = [];
-  odds = [];
-  for (var i = nums.length - 1; i >= 0; i--) {
-    if (nums[i] % 2 === 1) {
-      evens[i];
-      alert(i);
-    }
-    else {
-      odds[i];
-    }
-  }
-  alert(evens);
-  alert(odds);
-  //var newArray = [evens[], odds[], "worked"]
-  //return newArray;
-}
-
-divider(nums, evens, odds);
 
 
 //Next Problem
@@ -218,18 +184,18 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-
 var addTen = function(numbers) {
   var newNumbers = [];
   for (var i = 0; i < numbers.length; i++) {
     if (typeof numbers[i] === "string") {
-     parseInt(numbers[i], 10);  // <-- This line not working!!
-    };
-    newNumbers.push(numbers[i] + 10);
-  };
+     newNumbers.push(parseInt(numbers[i], 10) + 10)
+    } else {
+      newNumbers.push(numbers[i] + 10)
+    }
+  }
   return newNumbers;
 }
-
+addTen(numbers);
 
 
 //Next Problem
