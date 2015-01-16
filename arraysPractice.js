@@ -250,14 +250,23 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
 var longerArray = function (arr1, arr2) {
-  
-  return
+  var longerArray = [];
+  if (arr1 < arr2) {
+    longerOne = arr2;
+  } else {
+    longerOne = arr1;
+  }
+  return longerOne;
 }
 
+longerArray(arr1, arr2);
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-  //Code Here
+var both = function (arr1, arr2) {
+  var arr3 = arr1.concat(arr2);
+  return arr3;
+}
