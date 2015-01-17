@@ -16,11 +16,9 @@ var first = function(arr) {
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item the given array.
 
-
 var last = function(arr) {
-  return arr.pop();
+  return arr[arr.length - 1];
 }
-
 
 //Next Problem
 
@@ -29,12 +27,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, 
 //and alerts every item in the array.
 
-var looper = function(family) {
-  for (var i = 0; i < family.length; i++) {
-    alert(family[i]);
+var looper = function(myArr) {
+  for (var i = 0; i < myArr.length; i++) {
+    alert(myArr[i]);
   };
 }
-
+looper(family);
 
 //Next problem
 
@@ -106,18 +104,22 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
 var finder = function(numbers) {
-  for (var i = numbers.length - 1; i >= 0; i--) {
-    if (numbers.indexof[i] === getRandomArbitrary()) {
+  var ranNum = getRandomArbitrary();
+  for (var i in numbers) {
+    if (numbers[i] === ranNum) {
       return true;
-    }
+    } 
   }
+  return false;
 }
 finder(numbers);
 
 
 //Next problem
 
-
+for (var i = 0; i < Things.length; i++) {
+  Things[i]
+};
 
 var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
